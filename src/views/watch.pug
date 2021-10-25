@@ -1,0 +1,11 @@
+extends base 
+
+block content
+    p=video.description
+    small=new Date(video.createdAt).toLocaleDateString("ko-kr",{weekday:"long", year:"numeric",month:"long",day:"numeric"})
+    li
+        each hashtag in video.hashtags
+            a(href=`/search?keyword=${hashtag.substring(1)}`) #{hashtag} 
+    a(href=`${video.id}/edit`) Edit Video &rarr;
+    br
+    a(href=`${video.id}/delete`) Delete Video &rarr;

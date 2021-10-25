@@ -1,0 +1,6 @@
+mixin video(video)
+    h4 
+        a(href=`/videos/${video.id}`)=video.title 
+    small=new Date(video.createdAt).toLocaleDateString("ko-kr",{weekday:"long", year:'numeric',month:"long",day:"numeric"})
+    p=video.description
+    li=video.hashtags

@@ -1,0 +1,34 @@
+doctype html
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+        title Document
+    body 
+        h1=pageTitle 
+        nav
+            ul 
+                
+                li 
+                    a(href="/") HOME
+                if loggedIn 
+                    li 
+                        a(href="/upload") Upload
+                    li
+                        a(href="/logout") Logout
+                    li
+                        a(href="/users/edit") Edit Profile
+                else
+                    li 
+                        a(href="/login") LogIn 
+                    li 
+                        a(href="/join") Join
+                li 
+                    a(href="/search") Search
+                    
+
+        block content 
+
+        include partials/footer

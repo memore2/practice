@@ -2,27 +2,33 @@
   "name": "practice",
   "version": "1.0.0",
   "description": "",
-  "script": {
-    "dev": "nodemon --exec babel-node src/init.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/memore2/practice.git"
   },
-  "author": "",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/init.js"
+  },
+  "author": "jang hewon woo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/memore2/practice/issues"
   },
   "homepage": "https://github.com/memore2/practice#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "connect-mongo": "^4.6.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "mongoose": "^6.0.12",
     "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "node-fetch": "^2.6.1",
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "nodemon": "^2.0.14",
     "@babel/core": "^7.15.8",
     "@babel/node": "^7.15.8",
     "@babel/preset-env": "^7.15.8"
